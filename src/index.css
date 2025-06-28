@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-tablet: 800px;
+  --breakpoint-mobile: 500px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+
