@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Pages = ({head,paragraph,image ,icon, text}) => {
+const Pages = ({head,paragraph ,icon, text, className}) => {
   return (
     <div>
-        <section className=' w- '>
+        <section className='  '>
             <main>
                 <h1 className=' font-bold text-[47px] text-[#EFF5FC]'>{head}</h1>
                 <div className=' max-w-[50%] flex justify-center items-center px-3 gap-2 bg-[#EFF5FC] rounded-[20px] py-1.5 my-3'>
@@ -12,9 +12,7 @@ const Pages = ({head,paragraph,image ,icon, text}) => {
                 </div>
                 <p className=' text-[19px] text-[#EFF5FC]'>{text}</p>
             </main>
-            <main>
-                <img src={image} alt="" />
-            </main>
+            
         </section>
         
       
