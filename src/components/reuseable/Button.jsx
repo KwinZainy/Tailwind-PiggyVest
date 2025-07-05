@@ -13,8 +13,8 @@ const Button = ({text, bgColor, textColor, btnBorder, btnIcon, className}) => {
     
     className='py-4 px-3 rounded-xl flex items-center w-max'
     >
-        <span className='mr-3'>{btnIcon}</span>
-      <span className='font-medium'>{text}</span>  
+      <img src={btnIcon} alt="" className=' mr-3 w-[30px]' />
+      <span className='font-medium '>{text}</span>  
     </button>
   )
 }

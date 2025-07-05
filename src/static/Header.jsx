@@ -1,21 +1,17 @@
 import React, {useState} from 'react'
-
-import Button from '../components/reusable/Button';
-
 import { Link } from 'react-router-dom';
 import Save from '../pages/Save';
 import Resources from '../pages/Resources';
 import Hamburger from '../pages/Hamburger';
-const Header = () => {
-
-        
+import Button from '../components/reuseable/Button';
+const Header = () => {     
   return (
-    <div>
-       <header className=' h-24 flex justify-between items-center m-auto bg-blue-600 mx-12'>
+    <div className=' max-w-[2020px] text-center m-auto'>
+       <header className=' h-24 flex justify-between items-center m-auto bg-white mx-12 '>
         <section className='flex justify-between items-center gap-10 '>
             <Link to='/'>
             <main>
-            <img src="./logo.svg" alt="logo" />
+            <img src="./logo.svg" alt="logo"  className=' w-[200px]'/>
         </main>
             </Link>
         
@@ -48,7 +44,7 @@ const Header = () => {
             text='Create free account'
             />
         </section>
-        <section className='hidden max-tablet:block ' >
+        <section className='hidden bg-amber-300 max-tablet:block ' >
             <Hamburger/>
         </section>
         </header> 

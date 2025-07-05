@@ -18,9 +18,9 @@ const Save = ({className}) => {
         </div>
         
             {drop &&(
-                <div className='absolute flex justify-between items-center h-auto rounded-[10px] w-[38%]  pt-5 px-10 py-6 bg-[#FFFFFF] gap-5 ' class={className}>
+                <div className='absolute flex justify-between items-center h-auto rounded-[10px] w-[38%]  pt-5 px-10 py-6 bg-[#FFFFFF] gap-5 max-w-[500px] ' class={className}>
                   <section className=' grid gap-6 w-[50%]'>
-                <nav className=' flex items-center justify-center gap-2 '>
+                <nav className=' flex items-center justify-items-start gap-2'>
                   <main>
                     <FiShield className=' text-[#0F60D6] bg-[#EFF6FF] py-2 px-2 rounded-[10px] size-8'/>
                   </main>
