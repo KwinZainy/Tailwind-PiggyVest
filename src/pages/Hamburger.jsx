@@ -1,58 +1,149 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
+import {
+  FiShield,
+  FiTarget
+} from "react-icons/fi";
+import {
+  LuChevronDown,
+  LuLock,
+  LuDollarSign
+} from "react-icons/lu";
+import { IoWalletOutline } from "react-icons/io5";
+import { MdOutlineHouse } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
-import Save from './Save';
-import Invest from './Invest';
-import Stories from './Stories';
-import Faqs from './Faqs';
-import Resources from './Resources';
 import Button from '../components/reuseable/Button';
 
 const Hamburger = () => {
+  const [open, setOpen] = useState(false);
+  const [hoverSave, setHoverSave] = useState(false);
+  const [hoverResources, setHoverResources] = useState(false);
 
-    const [open, setOpen] = useState(false)
-    
-  return (
-    <div >
-        <div onClick={()=>setOpen(true)}>
-            <RxHamburgerMenu size={30}/>
-        </div>
-      
-        {open&&(
-            <div className='fixed inset-0 bg-[#F2F7F8] z-50'>
-                <div className=' text-[40px] absolute top-5 right-5 '>
-          <button  onClick={()=>setOpen(false)}>X</button>
-          </div>
-        <div className='  z-50  grid items-center justify-center' >
-            <div className='grid gap-10 text-black text-2xl mt-48'>
-           <nav className=' flex justify-center'><Save className='grid fixed top-35 left-12 z-10 justify-center rounded-[10px] w-[80%]  py-2 bg-[#FFFFFF]  h-auto ' /></nav>
-           <nav><Invest/></nav>
-           <nav><Stories/></nav>
-           <nav><Faqs/></nav>
-           <nav className=' flex justify-center'><Resources  className=' fixed z-10 left-4 flex justify-between items-center rounded-[10px] w-[95%] px-10 py-6 bg-[#FFFFFF] gap-5'/></nav>
-           <nav className=' flex flex-col gap-6 items-center'>
-            <Button
-            text="Sign in"
-            btnBorder='#122231'
-            className='px-10
-            py-5 rounded-[10px]'
-            />
-             <Button 
-              bgColor='#122231'
-            textColor='white'
-            text='Create free account'
-            className='px-10
-            py-5 rounded-[10px]'
-             />
-            
-            </nav>
-            
-          </div>
-        </div>
-        </div>
-    )}
+  const iconClasses = "w-10 h-10 flex-shrink-0";
+  const headingClasses = "font-semibold text-base text-black";
+
+  const MenuCard = ({ children }) => (
+    <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6 text-lg font-medium text-gray-800 hover:bg-gray-50 transition text-center">
+      {children}
     </div>
-    
-  )
-}
+  );
 
-export default Hamburger
+  return (
+    <div>
+    
+      <button
+        onClick={() => setOpen(true)}
+        className="cursor-pointer p-2 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        aria-label="Open menu"
+      >
+        <RxHamburgerMenu size={28} />
+      </button>
+
+    
+      {open && (
+        <div className="fixed inset-0 bg-[#F2F7F8] z-50 flex flex-col">
+          
+          <div className="flex justify-end p-5">
+            <button
+              onClick={() => setOpen(false)}
+              aria-label="Close menu"
+              className="text-gray-700 text-3xl font-bold hover:text-red-600 focus:outline-none"
+            >
+              &times;
+            </button>
+          </div>
+
+         
+          <div className="flex flex-col items-center justify-start flex-grow space-y-6 px-6 sm:px-12 pt-10 overflow-y-auto">
+
+            
+            <div
+              className="w-full max-w-md bg-white shadow-md rounded-lg"
+              onMouseEnter={() => setHoverSave(true)}
+              onMouseLeave={() => setHoverSave(false)}
+            >
+              <div className="flex items-center justify-between p-6 cursor-pointer">
+                <span className="text-lg font-medium text-gray-800">Save</span>
+                <LuChevronDown className={`transition-transform duration-300 ${hoverSave ? 'rotate-180' : ''}`} />
+              </div>
+
+              {hoverSave && (
+                <div className="px-6 pb-6 space-y-5">
+                  {[
+                    { icon: <FiShield className="text-[#0F60D6] bg-[#EFF6FF]" />, title: "Piggybank", desc: "Automated Saving" },
+                    { icon: <FiTarget className="text-green-600 bg-[#DDF5E8]" />, title: "Target Savings", desc: "Goal-oriented Saving" },
+                    { icon: <LuDollarSign className="text-[#122231] bg-[#F0F0F0]" />, title: "Flex Dollar", desc: "Dollar Savings" },
+                    { icon: <LuLock className="text-[#329DF3] bg-[#E7F4FF]" />, title: "Safelock", desc: "Fixed Savings" },
+                    { icon: <IoWalletOutline className="text-[#EA67AC] bg-[#FFF1F9]" />, title: "Flex Naira", desc: "Flexible Savings" },
+                    { icon: <MdOutlineHouse className="text-[#FF4E00] bg-[#FFECE3]" />, title: "House Money", desc: "Semi-strict wallet" },
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-4">
+                      <div className={`p-2 rounded-xl text-[24px] flex-shrink-0 ${item.icon.props.className}`}>
+                        {item.icon}
+                      </div>
+                      <div>
+                        <h2 className={headingClasses}>{item.title}</h2>
+                        <p className="text-[#7A7A7A] text-[13px]">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+         
+            <MenuCard>Invest</MenuCard>
+            <MenuCard>Stories</MenuCard>
+            <MenuCard>Faqs</MenuCard>
+
+         
+            <div
+              className="w-full max-w-md bg-white shadow-md rounded-lg"
+              onMouseEnter={() => setHoverResources(true)}
+              onMouseLeave={() => setHoverResources(false)}
+            >
+              <div className="flex items-center justify-between p-6 cursor-pointer">
+                <span className="text-lg font-medium text-gray-800">Resources</span>
+                <LuChevronDown className={`transition-transform duration-300 ${hoverResources ? 'rotate-180' : ''}`} />
+              </div>
+
+              {hoverResources && (
+                <div className="px-6 pb-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
+                  {[
+                    { img: "./blog.svg", title: "Blog" },
+                    { img: "./comics.svg", title: "Comics" },
+                    { img: "./newsletter.svg", title: "Newsletter" },
+                    { img: "./reports.svg", title: "Reports" },
+                    { img: "./calculator.svg", title: "Calculator" },
+                    { img: "./ebook.svg", title: "Ebook" },
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-4 hover:bg-gray-50 p-2 rounded-md transition cursor-pointer">
+                      <img src={item.img} alt={item.title} className={iconClasses} />
+                      <h2 className={headingClasses}>{item.title}</h2>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+          
+            <div className="flex flex-col w-full max-w-md gap-4 mt-4">
+              <Button
+                text="Sign in"
+                btnBorder="#122231"
+                className="w-full py-4 rounded-lg text-lg font-medium border border-[#122231]"
+              />
+              <Button
+                bgColor="#122231"
+                textColor="white"
+                text="Create free account"
+                className="w-full py-4 rounded-lg text-lg font-medium"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Hamburger;

@@ -8,10 +8,11 @@ const Button = ({text, bgColor, textColor, btnBorder, btnIcon, className}) => {
         backgroundColor: `${bgColor}`,
         color: `${textColor}`,
         border: `1px solid ${btnBorder}`,
+        textAlign: "center"
         
     }}
     
-    className='py-4 px-3 rounded-xl flex items-center w-max'
+    className='py-3 px-3 rounded-xl flex items-center w-max'
     >
       <img src={btnIcon} alt="" className=' mr-3 w-[30px]' />
       <span className='font-medium '>{text}</span>  
