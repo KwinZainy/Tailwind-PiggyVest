@@ -12,6 +12,7 @@ import { IoWalletOutline } from "react-icons/io5";
 import { MdOutlineHouse } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Button from '../components/reuseable/Button';
+import { Link } from 'react-router-dom';
 
 const Hamburger = () => {
   const [open, setOpen] = useState(false);
@@ -69,7 +70,7 @@ const Hamburger = () => {
               {hoverSave && (
                 <div className="px-6 pb-6 space-y-5">
                   {[
-                    { icon: <FiShield className="text-[#0F60D6] bg-[#EFF6FF]" />, title: "Piggybank", desc: "Automated Saving" },
+                    { icon: <FiShield className="text-[#0F60D6] bg-[#EFF6FF] " />, title: "Piggybank", desc: "Automated Saving" },
                     { icon: <FiTarget className="text-green-600 bg-[#DDF5E8]" />, title: "Target Savings", desc: "Goal-oriented Saving" },
                     { icon: <LuDollarSign className="text-[#122231] bg-[#F0F0F0]" />, title: "Flex Dollar", desc: "Dollar Savings" },
                     { icon: <LuLock className="text-[#329DF3] bg-[#E7F4FF]" />, title: "Safelock", desc: "Fixed Savings" },
@@ -77,7 +78,7 @@ const Hamburger = () => {
                     { icon: <MdOutlineHouse className="text-[#FF4E00] bg-[#FFECE3]" />, title: "House Money", desc: "Semi-strict wallet" },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <div className={`p-2 rounded-xl text-[24px] flex-shrink-0 ${item.icon.props.className}`}>
+                      <div className={`p-2 rounded-xl text-[24px] text-start flex-shrink-0 ${item.icon.props.className}`}>
                         {item.icon}
                       </div>
                       <div>
@@ -90,8 +91,8 @@ const Hamburger = () => {
               )}
             </div>
 
-         
-            <MenuCard>Invest</MenuCard>
+              <Link to='/invest'>Invest</Link>
+            
             <MenuCard>Stories</MenuCard>
             <MenuCard>Faqs</MenuCard>
 

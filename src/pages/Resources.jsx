@@ -5,7 +5,7 @@ const Resources = ({ className }) => {
   const [down, setDown] = useState(false);
 
   const iconClasses = "w-10 h-10 flex-shrink-0";
-  const headingClasses = "font-semibold text-lg text-black";
+  const headingClasses = "font-semibold text-black";
 
   return (
     <div
@@ -20,9 +20,9 @@ const Resources = ({ className }) => {
 
       {down && (
         <div
-          className={`absolute top-full left-0 mt-4 flex w-[500px] max-w-[90vw] rounded-xl bg-white shadow-xl p-6 z-50 ${className || ''}`}
+          className={`absolute top-full left-0  flex w-[480px] max-w-[90vw] rounded-xl bg-white shadow-xl p-6 z-50 ${className || ''}`}
         >
-          <section className="flex flex-col gap-6 w-1/2 pr-6">
+          <section className="flex flex-col gap-6 w-1/2 pr-3">
             <nav className="flex items-center gap-4 hover:bg-gray-50 p-2 rounded-md transition cursor-pointer">
               <img src="./blog.svg" alt="Blog" className={iconClasses} />
               <h2 className={headingClasses}>Blog</h2>
