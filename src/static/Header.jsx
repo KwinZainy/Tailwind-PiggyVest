@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <div className=" w-full text-center mt-2 flex">
-     <header className="h-24 w-full bg-white px-12 flex items-center">
+     <header className="h-24 w-full bg-white px-20 flex items-center">
   
   <div className="flex items-center gap-10 flex-grow">
     <Link to="/">

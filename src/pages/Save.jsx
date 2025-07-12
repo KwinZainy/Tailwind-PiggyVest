@@ -7,7 +7,7 @@ import { FiTarget, FiShield } from "react-icons/fi";
 const Save = ({ className }) => {
   const [drop, setDrop] = useState(false);
 
-  const iconClasses = "p-2 rounded-xl text-[40px] flex-shrink-0";
+  const iconClasses = "p-2 rounded-xl text-[30px] flex-shrink-0";
 
   const headingClasses = "font-semibold text-lg text-black"; 
 
@@ -26,10 +26,10 @@ const Save = ({ className }) => {
      
       {drop && (
         <div
-          className={`absolute top-full left-0 mt-4 flex w-[500px] max-w-[90vw] rounded-xl bg-white shadow-xl p-6 z-50 ${className || ''}`}
+          className={`absolute top-full left-0  flex w-[580px] max-w-[90vw] rounded-xl bg-white shadow-xl pt-4 z-50 ${className || ''}`}
         >
         
-          <section className="flex flex-col gap-6 w-1/2 pr-6">
+          <section className="flex flex-col gap-4 w-1/2 pr-6">
             <nav className="flex items-center gap-4 hover:bg-gray-50 p-2 rounded-md transition">
               <FiShield className={`${iconClasses} text-[#0F60D6] bg-[#EFF6FF]`} />
               <div>
@@ -54,7 +54,7 @@ const Save = ({ className }) => {
           </section>
 
          
-          <section className="flex flex-col gap-6 w-1/2 pl-6">
+          <section className="flex flex-col gap-4 w-1/2 pl-6">
             <nav className="flex items-center gap-4 hover:bg-gray-50 p-2 rounded-md transition">
               <LuLock className={`${iconClasses} text-[#329DF3] bg-[#E7F4FF]`} />
               <div>
