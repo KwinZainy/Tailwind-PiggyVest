@@ -23,7 +23,7 @@ const Hamburger = () => {
   const headingClasses = "font-semibold text-base text-black";
 
   const MenuCard = ({ children }) => (
-    <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6 text-lg font-medium text-gray-800 hover:bg-gray-50 transition text-center">
+    <div className="w-full  text-lg font-medium text-gray-800 hover:bg-gray-50 transition text-center">
       {children}
     </div>
   );
@@ -91,10 +91,13 @@ const Hamburger = () => {
               )}
             </div>
 
-              <Link to='/invest'>Invest</Link>
-            
-            <MenuCard>Stories</MenuCard>
-            <MenuCard>Faqs</MenuCard>
+              <Link to='/invest'>
+              <MenuCard> Invest</MenuCard>
+              
+              </Link>
+            <Link to='/stories'><MenuCard>Stories</MenuCard></Link>
+            <Link to='/faqs'><MenuCard>Faqs</MenuCard></Link>
+           
 
          
             <div
