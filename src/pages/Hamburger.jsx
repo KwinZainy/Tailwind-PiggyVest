@@ -101,11 +101,11 @@ const Hamburger = () => {
 
          
             <div
-              className="w-full max-w-md bg-white shadow-md rounded-lg"
+              className="w-full   rounded-lg"
               onMouseEnter={() => setHoverResources(true)}
               onMouseLeave={() => setHoverResources(false)}
             >
-              <div className="flex items-center justify-between p-6 cursor-pointer">
+              <div className="flex items-center text-center justify-center  p-6 cursor-pointer">
                 <span className="text-lg font-medium text-gray-800">Resources</span>
                 <LuChevronDown className={`transition-transform duration-300 ${hoverResources ? 'rotate-180' : ''}`} />
               </div>
@@ -130,17 +130,17 @@ const Hamburger = () => {
             </div>
 
           
-            <div className="flex flex-col w-full max-w-md gap-4 mt-4">
+            <div className="flex flex-col w-full max-w-md gap-6 mt-4 items-center">
               <Button
                 text="Sign in"
                 btnBorder="#122231"
-                className="w-full py-4 rounded-lg text-lg font-medium border border-[#122231]"
+                className="w-full py-4 rounded-[10px] text-lg font-medium border border-[#122231]"
               />
               <Button
                 bgColor="#122231"
                 textColor="white"
                 text="Create free account"
-                className="w-full py-4 rounded-lg text-lg font-medium"
+                className="w-full py-4 rounded-[10px] text-lg font-medium"
               />
             </div>
           </div>
