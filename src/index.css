@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-*{
+/* *{
     box-sizing: border-box;
-}
+} */
 
 @theme {
   --breakpoint-tablet: 800px;
