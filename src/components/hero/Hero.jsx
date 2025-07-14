@@ -14,8 +14,8 @@ const Hero = () =>{
         <div class="hero1">
             <a href="#" className=" w-[350px] font-bold">
                 <img src={Flower} alt="" />
-                <span>The 2024 Piggyvest Savings</span>
-                Report </a>
+                <span>The 2024 Piggyvest Savings Report</span>
+                 </a>
             <h1>The Better Way to Save & Invest</h1>
             <p>Piggyvest helps over 5 million customers achieve their financial goals by helping them save and invest with ease.</p>
             <div class="link">

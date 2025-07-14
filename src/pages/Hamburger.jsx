@@ -134,13 +134,13 @@ const Hamburger = () => {
               <Button
                 text="Sign in"
                 btnBorder="#122231"
-                className="w-full py-4 rounded-[10px] px-10 text-lg font-medium border border-[#122231]"
+                className=" py-4 rounded-[10px] px-30 text-lg font-medium border border-[#122231]"
               />
               <Button
                 bgColor="#122231"
                 textColor="white"
                 text="Create free account"
-                className="w-full py-4 px-14 rounded-[10px] text-lg font-medium"
+                className=" py-4 px-19 rounded-[10px] text-lg font-medium"
               />
             </div>
           </div>

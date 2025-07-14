@@ -20,7 +20,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className=" w-full text-center mt-2 flex">
+    <div className=" w-full text-center flex">
      <header className="h-24 w-full bg-white px-10 flex items-center">
   
   <div className="flex items-center gap-10 flex-grow">
