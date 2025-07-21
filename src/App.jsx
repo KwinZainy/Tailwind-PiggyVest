@@ -7,6 +7,7 @@ import Save from './pages/Save'
 import Resources from './pages/Resources'
 import Stories from './pages/Stories'
 import Faqs from './pages/Faqs'
+import PiggyBank from './pages/savePages/PiggyBank'
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
         <Route path='/resources' element={<Resources/>}/>
         <Route path='/stories' element={<Stories/>}/>
         <Route path='/faqs' element={<Faqs/>}/>
+        <Route path='/piggyBank' element={<PiggyBank/>}/>
       </Routes>
       </BrowserRouter>
     </div>

@@ -3,6 +3,7 @@ import { LuChevronDown, LuLock, LuDollarSign } from "react-icons/lu";
 import { IoWalletOutline } from "react-icons/io5";
 import { MdOutlineHouse } from "react-icons/md";
 import { FiTarget, FiShield } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 const Save = ({ className }) => {
   const [drop, setDrop] = useState(false);
@@ -30,6 +31,7 @@ const Save = ({ className }) => {
         >
         
           <section className="flex flex-col gap-4 w-1/2 pr-6">
+          <Link to='/piggyBank'>
             <nav className="flex items-center gap-4 hover:bg-gray-50 p-2 rounded-md transition">
               <FiShield className={`${iconClasses} text-[#0F60D6] bg-[#EFF6FF]`} />
               <div>
@@ -37,6 +39,7 @@ const Save = ({ className }) => {
                 <p className="text-[#7A7A7A] text-[13px]">Automated Saving</p>
               </div>
             </nav>
+            </Link>
             <nav className="flex items-center gap-4 hover:bg-gray-50 p-2 rounded-md transition">
               <FiTarget className={`${iconClasses} text-green-600 bg-[#DDF5E8]`} />
               <div>
